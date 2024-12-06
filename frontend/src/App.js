@@ -6,14 +6,7 @@ import './App.css';
 function App() {
   return (
     <div className="Page">
-      <header className="Header-Bar">
-        <div className="Header-Div">
-          <i src="./public/images/logo.png"></i>
-          <span className="Header-Left"> Call : +01 123455678990 </span>
-          <i src="./public/images/logo.png"></i>
-          <span className="Header-Right"> Email : demo@gmail.com </span>
-        </div>
-      </header>
+      This is where the actual page will be. This is for when we actually start making the page itself. Rn, we focus on header/Footer
     </div>
     /* This is where I will hide if I panic
     <div className="App">
