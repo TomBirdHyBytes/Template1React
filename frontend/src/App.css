@@ -1,4 +1,39 @@
-/* To start off with, we are just going to copy paste the start of the header. The goal will be to get the header bar done, figure out best practice on the way, then thrive*/
+/* Index part 1 */
+.FirstIndexDiv{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  justify-self: center;
+  align-items: center;
+}
+
+.IndexText{
+  width: 600px;
+  word-wrap: break-word;
+}
+
+.IndexHeader{
+  color: darkblue;
+}
+
+a.ContactButton{
+    background-color: orange;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: 2px solid orange;
+    margin-top: 20px;
+    width: 125px;
+    border-radius: 5px;
+}
+
+a:hover.ContactButton{
+  background-color: transparent;
+  color: orange;
+}
+
 /* Header */
 .Header-Bar {
   background-color: black;
@@ -59,12 +94,11 @@ a:hover.Footer-Link{
 
 div.Nav {
   background-color: skyblue;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding: 20px;
   text-align: center;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 ul.Nav{

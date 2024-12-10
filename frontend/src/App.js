@@ -1,35 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
 
-
-/* Clearly something funky is going on with the images */
 function App() {
   return (
     <div className="Page">
-      This is where the actual page will be. This is for when we actually start making the page itself. Rn, we focus on header/Footer
-    </div>
-    /* This is where I will hide if I panic
-    <div className="App">
-      <header className="App-header">
-        <div className = "Header-Bar"> 
-          <span> Call : +01 123455678990 </span>
-          <span> Email : demo@gmail.com </span>
+      <div style={{backgroundColor:"skyblue"}}>
+        <div className="FirstIndexDiv">
+          <div className='IndexText'>
+            <h1 className='IndexHeader'> Repair and <br/>
+            Maintenance <br/>
+            Services
+            </h1>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui harum voluptatem adipisci. 
+            Quos molestiae saepe dicta nobis pariatur, tempora iusto, ad possimus soluta hic praesentium mollitia consequatur beatae, aspernatur culpa. <br/>
+            <div className='ContactButton'>
+              <a className='ContactButton' href="/index.html">
+                <b>CONTACT US</b>
+              </a>
+            </div>
+          </div>
+          <div>
+            <img src="./images/slider-img.png" alt="Large Engineer"></img>
+          </div>
         </div>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload. I've changed this text.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        </div>
     </div>
-    */
   );
 }
 
