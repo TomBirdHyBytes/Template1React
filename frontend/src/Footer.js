@@ -1,6 +1,4 @@
 import './App.css';
-import logo from './images/logo.png'; /* Replace this with other stuff once we are done. */
-/* The images in the flexbox in the original are "font awesome" characters. Idk if we NEED them or not.*/
 
 function Footer() {
     return (
@@ -9,28 +7,33 @@ function Footer() {
           <div className="Footer-Div">
             <h1 className='Footer-H1'>Get In Touch</h1>
             <div className='Flex-Container'>
-                <a href="" className='Footer-Link'>
-                  <div>
-                      <div> <img src={logo} alt='Logo' /> </div>
-                      Lorem Ipsum is simply dummy text
-                  </div>
+              <div style={{alignItems:'center'}}>
+                <a href="index.html" className='Footer-Link'>
+                  <div className='Footer-Circle'> <i className="fa fa-map-marker" aria-hidden="true"></i> </div>
+                  <p>Lorem Ipsum is simply dummy text</p>
                 </a>
-                <a href="" className='Footer-Link'>
-                  <div>
-                      <div> <img src={logo} alt='Logo' /> </div>
-                      +02 1234567890
-                  </div>
+              </div>
+              <div>
+                <a href="index.html" className='Footer-Link'>
+                  <div className='Footer-Circle'> <i className="fa fa-phone" aria-hidden="true"></i> </div>
+                  <p>+02 1234567890</p>
                 </a>
-                <a href="" className='Footer-Link'>
-                  <div>
-                      <div> <img src={logo} alt='Logo' /> </div>
-                      demo@gmail.com
-                  </div>
+              </div>
+            <div>
+              <a href="index.html" className='Footer-Link'>
+                <div className='Footer-Circle'> <i className="fa fa-envelope" aria-hidden="true"></i> </div>
+                <p>demo@gmail.com</p>
                 </a>
             </div>
+          </div>
             <div>
               <h2>FOLLOW US</h2>
-              buttons
+              <div style={{backgroundColor:"white", width:"100px", justifySelf:"center"}}>
+                <i className="fa fa-facebook" aria-hidden="true" style={{color:"#0355cc"}}></i>
+                <i className="fa fa-twitter" aria-hidden="true" style={{color:"#0355cc"}}></i>
+                <i className="fa fa-youtube" aria-hidden="true" style={{color:"#0355cc"}}></i>
+                <i className="fa fa-instagram" aria-hidden="true" style={{color:"#0355cc"}}></i>
+              </div>
             </div>
             <br></br>
             <hr style={{width:"50%"}}></hr>

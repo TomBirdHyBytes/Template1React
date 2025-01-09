@@ -1,7 +1,7 @@
 import './App.css';
 
 function Item(selected, page) {
-    if (selected == page) {
+    if (selected === page) {
         return <li className='Nav'><a href="index.html" className='Nav-Link-Selected'> {selected} </a></li>;
     }
     return <li className='Nav'><a href="index.html" className='Nav-Link'> {page} </a></li>;

@@ -1,3 +1,26 @@
+/* Global variables */
+:root{
+  --lilac: #d1e3ff;
+  --inanceblue: #0355cc;
+  --footerblue: #0a0f43;
+}
+
+/* FA stuff */
+@font-face {
+  font-family: "FontAwesome";
+  src: local("FontAwesome"), url(./fonts/fontawesome-webfont.ttf) format(truetype);
+}
+
+@font-face {
+  font-family: "FontAwesome";
+  src: local("FontAwesome"), url(./fonts/fontawesome-webfont.woff) format(woff);
+}
+
+@font-face {
+  font-family: "FontAwesome";
+  src: local("FontAwesome"), url(./fonts/fontawesome-webfont.woff2) format(woff2);
+}
+
 /* Index part 1 */
 .FirstIndexDiv{
   display: flex;
@@ -5,6 +28,11 @@
   justify-content: space-around;
   justify-self: center;
   align-items: center;
+  padding-bottom: 0px;
+}
+
+.FirstEngineer {
+  display: block;
 }
 
 .IndexText{
@@ -13,7 +41,7 @@
 }
 
 .IndexHeader{
-  color: darkblue;
+  color: var(--inanceblue);
 }
 
 a.ContactButton{
@@ -32,6 +60,248 @@ a.ContactButton{
 a:hover.ContactButton{
   background-color: transparent;
   color: orange;
+}
+
+/* Index "button belt", the thin line of buttons across the first page */
+div.ButtonBelt{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  justify-self: center;
+  align-items: center;
+  height: 0px;
+  width: 55%;
+}
+
+div.BeltBox, div.BeltBoxEnd{
+  height: 179px;
+  width: 315px;
+  text-align: center;
+  align-content: center;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2); 
+}
+
+div.BeltBox{
+  background-color: white;
+  color: black;
+  animation-name: BeltBoxAnimLeave;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+}
+
+div.BeltBoxEnd{
+  background-color: orange;
+  color: white;
+}
+
+div.BeltBox:hover{
+  animation-name: BeltBoxAnim;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+}
+
+@keyframes BeltBoxAnim {
+  from {background-color: white; color: black;}
+  to {background-color: orange; color: white;}
+}
+
+@keyframes BeltBoxAnimLeave {
+  from {background-color: orange; color: white;}
+  to {background-color: white; color: black;}
+}
+
+img.BeltBox{
+  height: 80px;
+  width: 80px;
+}
+
+/* Index part 2 and 3, the "about us" and "professional" section */
+.AboutPage{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  justify-self: center;
+  align-items: center;
+  padding-bottom: 0px;
+  height: 800px;
+}
+
+.AboutText{
+  width: 500px;
+  word-wrap: break-word;
+}
+
+.AboutButton{
+  background-color: var(--inanceblue);
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: 2px solid var(--inanceblue);
+  margin-top: 20px;
+  width: 125px;
+}
+
+.AboutButton:hover{
+  background-color: transparent;
+  color: var(--inanceblue);
+}
+
+.AboutImg{
+  width: 650;
+  height: 450;
+}
+
+.ProvidePage{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  justify-self: center;
+  align-items: center;
+  height: 800px;
+}
+
+.ProvideHeader{
+  color: var(--inanceblue);
+}
+
+.ProvideButton{
+  background-color: orange;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: 2px solid orange;
+  margin-top: 20px;
+  width: 125px;
+}
+
+.ProvideButton:hover{
+background-color: transparent;
+color: orange;
+}
+
+/* Index part 4, "services" */
+.ServiceDiv{
+  justify-self: center;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  height: 400px;
+  width: 100%;
+}
+
+.ServiceBox{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  width: 1400px;
+  margin: auto;
+}
+
+.ServiceBeltBox{
+  height: 200px;
+  width: 400px;
+  text-align: center;
+  align-content: center;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2); 
+  word-wrap: break-word;
+  padding: 20px 20px;
+  animation-name: BeltBoxAnimLeave;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+}
+
+.ServiceBeltBox:hover{
+  animation-name: BeltBoxAnim;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+}
+
+/* Index part 5, customers */
+.ClientDiv{
+  justify-content: center;
+  text-align: center;
+}
+
+.CarouselBox{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.ClientCarousel{
+  width: 500px;
+  height: 200px;
+  margin-bottom: 20px;
+  padding: 40px 20px 40px 20px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+#LeftCarousel{
+  text-align: right;
+  margin-right: 10px;
+}
+
+#RightCarousel{
+  text-align: left;
+  margin-left: 10px;
+}
+
+.CarouselButton{
+  background-color: var(--inanceblue);
+  color: white;
+  border-style: none;
+  height: 50px;
+  width: 50px;
+}
+
+.ClientArea{
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  text-align: left;
+  text-justify: center;
+  align-items: center;
+}
+
+.ClientImage{
+  display: inline;
+  border-radius: 50%;
+  margin-right: 25px;
+}
+
+/* Index part 6, contact form */
+.ContactDiv{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  justify-self: center;
+  align-items: center;
+  padding-bottom: 0px;
+  height: 800px;
+}
+
+.FormDiv{
+  width: 600px;
+}
+
+input {
+  box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.2); 
+  width: 80%;
+  border: transparent;
+  height: 40px;
+  margin-bottom: 20px;
+  text-align: left;
+  padding-left: 25px;
+}
+
+input.Message{
+  height: 160px;
 }
 
 /* Header */
@@ -62,7 +332,7 @@ a:hover.ContactButton{
 /* Footer */
 .Footer-Bar{
   text-align: center;
-  background-color: rgb(0, 0, 128);
+  background-color: var(--footerblue);
   color: azure;
 }
 
@@ -76,6 +346,8 @@ a:hover.ContactButton{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  justify-self: center;
+  width: 60%;
 }
 
 a.Footer-Link {
@@ -83,17 +355,28 @@ a.Footer-Link {
   text-decoration: none;
 }
 
-a:hover.Footer-Link{
+.Footer-Circle{
+  background-color: var(--inanceblue);
+  font-size: 150%;
+  border-radius: 50%;
+  height: 75px;
+  width: 75px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 75px;
+}
+
+.Footer-Circle:hover{
   background-color: orange;
 }
 
 /* Nav Bar */
 .Inance {
-  color: darkblue;
+  color: var(--inanceblue);
 }
 
 div.Nav {
-  background-color: skyblue;
+  background-color: var(--lilac);
   padding: 20px;
   text-align: center;
   display: flex;
@@ -117,52 +400,7 @@ a.Nav-Link {
   text-decoration: none;
 }
 
-a.Nav-Link-Selected{
-  color:blue;
+a.Nav-Link-Selected, a:hover.Nav-Link {
+  color:var(--inanceblue);
   text-decoration: none;
-}
-
-a:hover.Nav-Link {
-  color:blue;
-  text-decoration: none;
-}
-
-/* Everything below this comes with the default build. Right now, it is load bearing, so we keep it */
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
